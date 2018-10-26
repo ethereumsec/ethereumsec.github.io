@@ -1,0 +1,1 @@
+Get-ChildItem -Path .\output -Include *.* -File -Recurse | foreach { $_.Delete()}
