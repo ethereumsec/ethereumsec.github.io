@@ -398,7 +398,7 @@ label.required:after {
 
 
 
-/* 4. Ïóòóêôä styles and Screen readers
+/* 4. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ styles and Screen readers
 -------------------------------------------------------------- */
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -4962,7 +4962,7 @@ iframe[name="google_conversion_frame"] { height:1px; min-height:0; display:none;
 	background-repeat: no-repeat;
 }
 .custom_texture_bg1{
-	background-image: url(http://placehold.it/1920x850.jpg) !important;
+	background-image: url(/theme/images/white-texture-1.jpg) !important;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -4981,7 +4981,7 @@ iframe[name="google_conversion_frame"] { height:1px; min-height:0; display:none;
 	background-repeat: no-repeat;
 }
 .custom_section_bg1{
-	background-image: url(http://placehold.it/1920x920.jpg) !important;
+	background-image: url(/theme/images/black-texture-1.jpg) !important;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
