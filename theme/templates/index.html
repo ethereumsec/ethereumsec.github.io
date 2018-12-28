@@ -3,17 +3,7 @@
 {% block title %}Ethereum Security Blog{% endblock %}
 
 {% block content %}
-<!--
 
-{% for article in articles %}
-   <h2><a href="/{{ article.slug }}.html">{{ article.title }}</a></h2>
-   <label>Posted on <strong>{{ article.date }}</strong></label>
-   {{ article.content|truncate(110) }}
-{% else %}
-   No posts yet!
-{% endfor %}
-
--->
 <div id="page_preloader"></div>
 <!-- Body wrap -->
 <div class="body_wrap">
@@ -192,7 +182,7 @@
             <div class="copyright_wrap_inner">
                 <div class="content_wrap">
                     <div class="copyright_text">
-                        <a href="/">Ethereum Security Blog</a> - 2018 - <a href="https://github.com/ethereumsec/ethereumsec.github.io">Contribute on Github!</a>
+                        <a href="/">Ethereum Security Blog</a> - <script type="text/javascript">document.write(new Date().getFullYear());</script> - <a href="https://github.com/ethereumsec/ethereumsec.github.io">Contribute on Github!</a>
                     </div>
                 </div>
             </div>
@@ -218,4 +208,5 @@
 <script type="text/javascript" src="/theme/js/shortcodes.js"></script>
 <script type="text/javascript" src="/theme/js/messages.js"></script>
 <script type="text/javascript" src="/theme/js/vendor/magnific/jquery.magnific-popup.min.js"></script>
+
 {% endblock %}
