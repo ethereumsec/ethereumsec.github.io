@@ -3,6 +3,7 @@ slug: test123
 category: general
 date: 2018-10-01
 modified: 2018-10-01
+template: blog_page
 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor eros nunc, ac posuere erat ultrices sed. Nullam sit amet cursus ligula, pharetra placerat erat. Pellentesque non turpis a sapien egestas maximus ac vitae mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed tempor non nunc ac luctus. Donec porta posuere erat, at vulputate felis lobortis eget. Maecenas efficitur varius venenatis. Donec placerat augue sed fringilla fringilla. Duis neque risus, facilisis quis massa nec, ultricies porta quam. Fusce accumsan non velit sed scelerisque. Curabitur hendrerit feugiat lectus eu lacinia. Nulla fringilla urna non est lacinia, ut fringilla leo condimentum. Mauris mattis dolor vitae odio fermentum dapibus. In in nisl quis dolor pulvinar finibus a id nisl. Nam magna elit, scelerisque eu tortor a, vestibulum sodales turpis. Phasellus gravida nisi non sem tristique, vel gravida felis lacinia.

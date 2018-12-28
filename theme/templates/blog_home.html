@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Ethereum Security Blog{% endblock %}
+
+{% block content %}
+<div>
+ <div>
+  <h1>{{ article.title }}</h1>
+  <label>Posted on <strong>{{ article.date }}</strong></label>
+  {{ article.content }}
+ </div>
+</div>
+{% endblock %}
