@@ -4,11 +4,18 @@ def deltree(target):
     if False == os.path.exists(target):
         return
     for d in os.listdir(target):
+        if False == os.path.exists(target + os.sep + d):
+            continue
         try:
             deltree(target + os.sep + d)
             os.rmdir(target + os.sep + d)
         except OSError:
-            os.remove(target + os.sep + d)
+            try:
+                os.remove(target + os.sep + d)
+            except:
+                pass
+        except:
+            pass
     try:
         os.rmdir(target)
     except:
