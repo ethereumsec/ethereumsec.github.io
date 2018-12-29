@@ -1,1 +1,0 @@
-pelican .\content -t .\theme -o .\output -s .\pelicanconf.py --relative-urls
