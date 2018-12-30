@@ -31,6 +31,7 @@
     <div class="body_wrap">
         <!-- Page wrap -->
         <div class="page_wrap">
+            <!-- Header -->
             <header class="top_panel_wrap top_panel_style_6 scheme_original">
                 <div class="top_panel_wrap_inner top_panel_inner_style_6 top_panel_position_over">
                     <!-- Logo -->
@@ -127,6 +128,9 @@
                 <div class="mask"></div>
             </div>
             <!-- /Header Mobile -->
+            <!-- Breadcrumbs -->
+            {% block breadcrumbs %}{% endblock %}
+            <!-- /Breadcrumbs -->
             <!-- Page Content -->
             <div class="page_content_wrap page_paddings_no">
                 <!-- Content -->
@@ -137,7 +141,7 @@
             </div>
             <!-- /Page Content -->
             <!-- Not Copyright -->
-            <div class="copyright_wrap copyright_style_text  scheme_original">
+            <div class="copyright_wrap copyright_style_text scheme_original">
                 <div class="copyright_wrap_inner">
                     <div class="content_wrap">
                         <div class="copyright_text">
