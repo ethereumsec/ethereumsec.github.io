@@ -3,7 +3,6 @@
 {% block title %}Ethereum Security Blog{% endblock %}
 
 {% block content %}
-
 <article class="post_item post_item_single">
     <section class="post_content">
         <!-- Course Callout -->
@@ -33,17 +32,11 @@
                             <span class="thin"> Posts</span>
                         </h2>
                         <!-- START: Spit out all posts -->
-                        {% set counter = 0 -%}
-                        {% for article in articles %}
+                        {% for article in articles[:5] %}
                         {% if article.title|string() != "Blog"|string() %}
-                        {% if article.title|string() != "Course"|string() %}
-                        {% set counter = counter + 1 %}
-                        {% if counter < 5 %}
                         <div class="sc_section_descr sc_item_descr" style="margin-bottom:1rem">
                             <p style="color:blue;font-weight:bold"><a style="color:blue;font-weight:bold;margin-bottom:0" href="/{{ article.slug }}.html">{{ article.title }}</a></p>
                         </div>
-                        {% endif %}
-                        {% endif %}
                         {% endif %}
                         {% else %}
                         <div class="sc_section_descr sc_item_descr">
@@ -76,5 +69,4 @@
         <!-- /Call To Contribute -->
     </section>
 </article>
-         
 {% endblock %}

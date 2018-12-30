@@ -31,103 +31,8 @@
     <div class="body_wrap">
         <!-- Page wrap -->
         <div class="page_wrap">
-            <!-- Header -->
-            <header class="top_panel_wrap top_panel_style_6 scheme_original">
-                <div class="top_panel_wrap_inner top_panel_inner_style_6 top_panel_position_over">
-                    <!-- Logo -->
-                    <div class="top_panel_middle">
-                        <div class="content_wrap">
-                            <div class="contact_logo">
-                                <div class="logo">
-                                    <a href="index.html">
-                                        <img src="/theme/images/logo_small.png" class="logo_main" alt="Ethereum Security Blog">
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Menu -->
-                            <div class="menu_main_wrap">
-                                <nav class="menu_main_nav_area">
-                                    <ul class="menu_main_nav">
-                                        <!-- Home -->
-                                        <li class="menu-item">
-                                            <a href="/">Home</a>
-                                        </li>
-                                        <!-- /Home -->
-                                        <!-- Blog -->
-                                        <li class="menu-item">
-                                            <a href="/blog.html">Blog</a>
-                                        </li>
-                                        <!-- /Blog -->
-                                        <!-- Course -->
-                                        <li class="menu-item">
-                                            <a href="/course.html">Course</a>
-                                        </li>
-                                        <!-- /Course -->
-                                        <!-- Github -->
-                                        <li class="menu-item">
-                                            <a href="https://github.com/ethereumsec/ethereumsec.github.io">Github</a>
-                                        </li>
-                                        <!-- /Github -->
-                                    </ul>
-                                </nav>
-                            </div>
-                            <!-- /Menu -->
-                        </div>
-                    </div>
-                    <!-- /Logo -->
-                </div>
-            </header>
-            <!-- /Header -->
-            <!-- Header Mobile -->
-            <div class="header_mobile">
-                <div class="content_wrap">
-                    <div class="menu_button icon-menu"></div>
-                    <!-- Logo -->
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="/theme/images/logo_small.png" class="logo_main" alt="Ethereum Security Blog">
-                        </a>
-                    </div>
-                    <!-- /Logo -->
-                </div>
-                <!-- Side wrap -->
-                <div class="side_wrap">
-                    <div class="close">Close</div>
-                    <!-- Top panel -->
-                    <div class="panel_top">
-                        <!-- Menu -->
-                        <nav class="menu_main_nav_area">
-                            <ul class="menu_main_nav">
-                                <!-- Home -->
-                                <li class="menu-item">
-                                    <a href="/">Home</a>
-                                </li>
-                                <!-- /Home -->
-                                <!-- Blog -->
-                                <li class="menu-item">
-                                    <a href="/blog.html">Blog</a>
-                                </li>
-                                <!-- /Blog -->
-                                <!-- Course -->
-                                <li class="menu-item">
-                                    <a href="/course.html">Course</a>
-                                </li>
-                                <!-- /Course -->
-                                <!-- Github -->
-                                <li class="menu-item">
-                                    <a href="https://github.com/ethereumsec/ethereumsec.github.io">Github</a>
-                                </li>
-                                <!-- /Github -->
-                            </ul>
-                        </nav>
-                        <!-- /Menu -->
-                    </div>
-                    <!-- /Top panel -->
-                </div>
-                <!-- /Side wrap -->
-                <div class="mask"></div>
-            </div>
-            <!-- /Header Mobile -->
+            {% include 'partials/header_normal.html' %}
+            {% include 'partials/header_mobile.html' %}
             <!-- Breadcrumbs -->
             {% block breadcrumbs %}{% endblock %}
             <!-- /Breadcrumbs -->
@@ -140,36 +45,11 @@
                 <!-- /Content -->
             </div>
             <!-- /Page Content -->
-            <!-- Not Copyright -->
-            <div class="copyright_wrap copyright_style_text scheme_original">
-                <div class="copyright_wrap_inner">
-                    <div class="content_wrap">
-                        <div class="copyright_text">
-                            <a href="/">Ethereum Security Blog</a> - <script type="text/javascript">document.write(new Date().getFullYear());</script> - <a href="https://github.com/ethereumsec/ethereumsec.github.io">Contribute on Github!</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Not Copyright -->
+            {% include 'partials/not_copyright.html' %}
         </div>
         <!-- /Page wrap -->
     </div>
     <!-- /Body wrap -->
-    
-    <a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a>
-    
-    <script type="text/javascript" src="/theme/js/jquery/jquery.js"></script>
-    <script type="text/javascript" src="/theme/js/jquery/jquery-migrate.min.js"></script>
-    <script type="text/javascript" src="/theme/js/_main.js"></script>
-    <script type="text/javascript" src="/theme/js/trx_utils.min.js"></script>
-    <script type="text/javascript" src="/theme/js/_packed.js"></script>
-    <script type="text/javascript" src="/theme/js/vendor/photostack/modernizr.min.js"></script>
-    <script type="text/javascript" src="/theme/js/vendor/superfish.js"></script>
-    <script type="text/javascript" src="/theme/js/utils.js"></script>
-    <script type="text/javascript" src="/theme/js/core.init.js"></script>
-    <script type="text/javascript" src="/theme/js/init.js"></script>
-    <script type="text/javascript" src="/theme/js/shortcodes.js"></script>
-    <script type="text/javascript" src="/theme/js/messages.js"></script>
-    <script type="text/javascript" src="/theme/js/vendor/magnific/jquery.magnific-popup.min.js"></script>
+    {% include 'partials/footer.html' %}
 </body>
 </html>
