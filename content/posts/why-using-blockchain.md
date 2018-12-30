@@ -1,4 +1,5 @@
 title: "Why are you using a blockchain?"
+author: Randy Gingeleski
 slug: why-using-blockchain
 summary: Like a trusted friend, you should help your blockchain-happy clients without being judgmental.
 category: assessment

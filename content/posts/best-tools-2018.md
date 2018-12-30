@@ -1,4 +1,5 @@
 title: Best Ethereum security tools of 2018
+author: Randy Gingeleski
 slug: best-tools-2018
 summary: With 2018 closed out, let's round up the best Ethereum security and hacking tools.
 category: tools

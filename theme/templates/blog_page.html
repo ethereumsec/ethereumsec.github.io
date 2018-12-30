@@ -1,13 +1,187 @@
-{% extends "base.html" %}
-
-{% block title %}{{ article.title }} - Ethereum Security Blog{% endblock %}
-
-{% block content %}
-<div>
- <div>
-  <h1>{{ article.title }}</h1>
-  <label>Posted on <strong>{{ article.date }}</strong></label>
-  {{ article.content }}
- </div>
-</div>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en-US" class="scheme_original">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>{{ article.title }} - Ethereum Security Blog</title>
+    {% if article.author %}
+    <meta name="author" content="{{ article.author }}" />
+    {% endif %}
+    {% if article.summary %}
+    <meta name="description" content="{{ article.summary|striptags|escape }}" />
+    {% endif %}
+    {% if article.tags %}
+    <meta name="keywords" content="{{ article.tags|join(',')|striptags }}" />
+    {% endif %}
+    <meta property="og:site_name" content="Ethereum Security Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ article.title|striptags|escape }}" />
+    <meta property="og:url" content="https://ethsec.io" />
+    <meta property="og:description" content="{{ article.summary|striptags|escape }}" />
+    <meta property="article:published_time" content="{{ article.date.strftime("%Y-%m-%d") }}" />
+    {% if article.category %}
+    <meta property="article:section" content="{{ article.category }}" />
+    {% endif %}
+    {% for tag in article.tags %}
+    <meta property="article:tag" content="{{ tag }}" />
+    {% endfor %}
+    <link rel="stylesheet" href="/theme/js/vendor/woocommerce/css/woocommerce-layout.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/js/vendor/woocommerce/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" />
+    <link rel="stylesheet" href="/theme/js/vendor/woocommerce/css/woocommerce.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/js/vendor/revslider/css/settings.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/tpl-revslider.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:300,400,700%7CLato:300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext">
+    <link rel="stylesheet" href="/theme/css/fontello/css/fontello.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/animation.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/shortcodes.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/plugin.woocommerce.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/skin.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/responsive.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/messages.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/js/vendor/magnific/magnific-popup.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/js/vendor/swiper/swiper.min.css" type="text/css" media="all" />
+    <link rel="icon" href="/theme/images/favicon_32x32.png" sizes="32x32" />
+    <link rel="icon" href="/theme/images/favicon_192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="/theme/images/favicon_180x180.jpg" />
+</head>
+<body class="body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_show sidebar_right">
+    <div id="page_preloader"></div>
+    <!-- Body wrap -->
+    <div class="body_wrap">
+        <!-- Page wrap -->
+        <div class="page_wrap">
+            {% include 'partials/header_normal.html' %}
+            {% include 'partials/header_mobile.html' %}
+            <!-- Breadcrumbs -->
+            <div class="top_panel_title top_panel_style_1 title_present breadcrumbs_present scheme_original">
+                <div class="top_panel_title_inner top_panel_inner_style_1">
+                    <div class="content_wrap">
+                        <h1 class="page_title">{{ article.title }}</h1>
+                        <div class="breadcrumbs">
+                            <a class="breadcrumbs_item blog" href="/blog">Blog</a>
+                            <span class="breadcrumbs_delimiter"></span>
+                            <span class="breadcrumbs_item current">{{ article.title }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Breadcrumbs -->
+            <!-- Page Content -->
+            <div class="page_content_wrap page_paddings_yes">
+                <div class="content_wrap">
+                    <!-- Content -->
+                    <div class="content">
+                        <article class="post_item post_item_single">
+                            <!-- Post Content -->
+                            <section class="post_content">
+                                <div class="post_info">
+                                    <span class="post_info_item post_info_posted">Posted {{ article.date|strftime('%A, %B %d, %Y') }}</span>
+                                    <span class="post_info_item">by <a href="/author/{{ article.author }}.html" class="post_info_author">{{ article.author }}</a></span>
+                                    <span class="post_info_item post_info_tags">in
+                                        {% if article.category %}
+                                        <a class="category_link" href="/category/{{ article.category }}.html">{{ article.category }}</a>
+                                        {% endif %}
+                                    </span>
+                                </div>
+                                <div class="post_summary">
+                                    <p>{{ article.summary }}</p>
+                                </div>
+                                <div>
+                                    {{ article.content }}
+                                </div>
+                                <div class="post_info post_info_bottom">
+                                    <span class="post_info_item post_info_tags">Tags:
+                                        {% for tag in article.tags %}
+                                        <a class="post_tag_link" href="/tag/{{ tag }}.html">{{ tag }}</a>
+                                        {% endfor %}
+                                    </span>
+                                </div>
+                            </section>
+                            <!-- /Post Content -->
+                            <!-- Post Author -->
+                            <!-- 
+                            <section class="post_author author">
+                                <h6 class="post_author_title">About <span><a href="#">{{ article.author }}</a></span>
+                                </h6>
+                                <div class="post_author_info">
+                                    Nam efficitur turpis at nibh aliquet, sed viverra felis accumsan. Curabitur lacinia vitae nulla sit amet mollis. Suspendisse quis augue lorem. Mauris finibus sem nec venenatis sagittis. Pellentesque mattis pulvinar tellus a malesuada.
+                                </div>
+                            </section>
+                            -->
+                            <!-- /Post Author -->
+                        </article>
+                        <!-- Comments -->
+                        <!--
+                        <section class="comments_wrap">
+                            <div id="comments" class="comments_list_wrap">
+                                <h3 class="section_title comments_list_title">No Comments</h3>
+                                <ul class="comments_list"></ul>
+                            </div>
+                            <div class="comments_form_wrap">
+                                <h3 class="section_title comments_form_title">Add Comment</h3>
+                                <div class="comments_form">
+                                    <div id="respond" class="comment-respond">
+                                        <form action="#" method="post" id="commentform" class="comment-form">
+                                            <div class="social-login-widget">
+                                                <div class="social-login-connect-with">Connect with:</div>
+                                                <div class="ocial-login-provider-list">
+                                                    <a href="#" title="Connect with Facebook">
+                                                        <img alt="Facebook" title="Connect with Facebook" src="images/facebook.png" />
+                                                    </a>
+                                                    <a href="#">
+                                                        <img alt="Google" title="Connect with Google" src="images/google.png" />
+                                                    </a>
+                                                    <a href="#" title="Connect with Twitter">
+                                                        <img alt="Twitter" title="Connect with Twitter" src="images/twitter.png" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <p class="comments_notes">Your email address will not be published. Required fields are marked *</p>
+                                            <div class="comments_field comments_message">
+                                                <label for="comment" class="required">Your Message</label>
+                                                <textarea id="comment" name="comment" placeholder="Comment" aria-required="true"></textarea>
+                                            </div>
+                                            <div class="columns_wrap">
+                                                <div class="comments_field comments_author column-1_2">
+                                                    <label for="author" class="required">Name</label>
+                                                    <input id="author" name="author" type="text" placeholder="Name *" value="" size="30" aria-required="true" />
+                                                </div>
+                                                <div class="comments_field comments_email column-1_2">
+                                                    <label for="email" class="required">Email</label>
+                                                    <input id="email" name="email" type="text" placeholder="Email *" value="" size="30" aria-required="true" />
+                                                </div>
+                                                <div class="comments_field comments_site column-1_1">
+                                                    <label for="url" class="optional">Website</label>
+                                                    <input id="url" name="url" type="text" placeholder="Website" value="" size="30" aria-required="true" />
+                                                </div>
+                                            </div>
+                                            <p class="form-submit">
+                                                <input name="submit" type="submit" id="send_comment" class="submit" value="Post Comment" />
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        -->
+                        <!-- /Comments -->
+                    </div>
+                    <!-- /Content -->
+                    <!-- Sidebar -->
+                    <div class="sidebar widget_area scheme_original">
+                        <div class="sidebar_inner widget_area_inner"></div>
+                    </div>
+                    <!-- /Sidebar -->
+                </div>
+            </div>
+            <!-- /Page Content -->
+            {% include 'partials/not_copyright.html' %}
+        </div>
+        <!-- /Page wrap -->
+    </div>
+    <!-- /Body wrap -->
+    {% include 'partials/footer.html' %}
+</body>
+</html>

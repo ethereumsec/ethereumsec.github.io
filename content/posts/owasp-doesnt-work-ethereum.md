@@ -1,4 +1,5 @@
 title: Why "the OWASP approach" doesn't work for Ethereum
+author: Randy Gingeleski
 slug: owasp-doesnt-work-ethereum
 summary: The way we've rated and reported vulnerabilities for normal web apps isn't best for Ethereum dapps.
 category: assessment

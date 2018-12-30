@@ -1,4 +1,5 @@
 title: Is quantum computing a viable threat to Ethereum?
+author: Randy Gingeleski
 slug: ethereum-quantum-threat
 summary: Blockchain skeptics say quantum computing will end Ethereum. Let's elaborate.
 category: threat modeling

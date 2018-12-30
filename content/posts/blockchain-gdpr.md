@@ -1,4 +1,5 @@
 title: How to do GDPR with smart contracts and/or blockchain
+author: Randy Gingeleski
 slug: blockchain-gdpr
 summary: Is it possible to be GDPR compliant when developing with blockchain? Kinda.
 category: policy

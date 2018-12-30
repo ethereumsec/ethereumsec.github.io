@@ -1,4 +1,5 @@
 title: How do you benchmark Ethereum security tools?
+author: Randy Gingeleski
 slug: tool-benchmarking
 summary: When you encounter overlapping Ethereum tools, use these techniques to determine the best one for the job.
 category: tools
