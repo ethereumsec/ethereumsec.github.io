@@ -3,11 +3,12 @@
 {% block title %}{{ article.title }} - Open Ethereum Security Course{% endblock %}
 
 {% block content %}
-<div>
- <div>
-  <h1>{{ article.title }}</h1>
-  <label>Posted on <strong>{{ article.date }}</strong></label>
-  {{ article.content }}
- </div>
-</div>
+
+<article class="post_item post_item_single">
+    <section class="post_content">
+        <h1>{{ article.title }}</h1>
+        {{ article.content }}
+    </section>
+</article>
+
 {% endblock %}
