@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scheme_original">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Is quantum computing a viable threat to Ethereum? - Ethereum Security Blog</title>
+    <meta name="author" content="Randy Gingeleski" />
+    <meta name="description" content="Blockchain skeptics say quantum computing will end Ethereum. Let&#39;s elaborate." />
+    <meta name="keywords" content="quantum computing,threat modeling" />
+    <meta property="og:site_name" content="Ethereum Security Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Is quantum computing a viable threat to Ethereum?" />
+    <meta property="og:url" content="https://ethsec.io" />
+    <meta property="og:description" content="Blockchain skeptics say quantum computing will end Ethereum. Let&#39;s elaborate." />
+    <meta property="article:published_time" content="2018-12-30" />
+    <meta property="article:section" content="threat modeling" />
+    <meta property="article:tag" content="quantum computing" />
+    <meta property="article:tag" content="threat modeling" />
+    <link rel="stylesheet" href="/theme/js/vendor/woocommerce/css/woocommerce-layout.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/js/vendor/woocommerce/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" />
+    <link rel="stylesheet" href="/theme/js/vendor/woocommerce/css/woocommerce.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/js/vendor/revslider/css/settings.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/tpl-revslider.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:300,400,700%7CLato:300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext">
+    <link rel="stylesheet" href="/theme/css/fontello/css/fontello.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/animation.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/shortcodes.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/plugin.woocommerce.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/skin.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/responsive.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/messages.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/js/vendor/magnific/magnific-popup.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/js/vendor/swiper/swiper.min.css" type="text/css" media="all" />
+    <link rel="icon" href="/theme/images/favicon_32x32.png" sizes="32x32" />
+    <link rel="icon" href="/theme/images/favicon_192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="/theme/images/favicon_180x180.jpg" />
+</head>
+<body class="body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_show sidebar_right">
+    <div id="page_preloader"></div>
+    <!-- Body wrap -->
+    <div class="body_wrap">
+        <!-- Page wrap -->
+        <div class="page_wrap">
+<!-- Header -->
+<header class="top_panel_wrap top_panel_style_6 scheme_original">
+    <div class="top_panel_wrap_inner top_panel_inner_style_6 top_panel_position_over">
+        <!-- Logo -->
+        <div class="top_panel_middle">
+            <div class="content_wrap">
+                <div class="contact_logo">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/theme/images/logo_small.png" class="logo_main" alt="Ethereum Security Blog">
+                        </a>
+                    </div>
+                </div>
+                <!-- Menu -->
+                <div class="menu_main_wrap">
+                    <nav class="menu_main_nav_area">
+                        <ul class="menu_main_nav">
+                            <!-- Home -->
+                            <li class="menu-item">
+                                <a href="/">Home</a>
+                            </li>
+                            <!-- /Home -->
+                            <!-- Blog -->
+                            <li class="menu-item">
+                                <a href="/blog.html">Blog</a>
+                            </li>
+                            <!-- /Blog -->
+                            <!-- Course -->
+                            <li class="menu-item">
+                                <a href="/course.html">Course</a>
+                            </li>
+                            <!-- /Course -->
+                            <!-- Github -->
+                            <li class="menu-item">
+                                <a href="https://github.com/ethereumsec/ethereumsec.github.io">Github</a>
+                            </li>
+                            <!-- /Github -->
+                        </ul>
+                    </nav>
+                </div>
+                <!-- /Menu -->
+            </div>
+        </div>
+        <!-- /Logo -->
+    </div>
+</header>
+<!-- /Header --><!-- Header Mobile -->
+<div class="header_mobile">
+    <div class="content_wrap">
+        <div class="menu_button icon-menu"></div>
+        <!-- Logo -->
+        <div class="logo">
+            <a href="/">
+                <img src="/theme/images/logo_small.png" class="logo_main" alt="Ethereum Security Blog">
+            </a>
+        </div>
+        <!-- /Logo -->
+    </div>
+    <!-- Side wrap -->
+    <div class="side_wrap">
+        <div class="close">Close</div>
+        <!-- Top panel -->
+        <div class="panel_top">
+            <!-- Menu -->
+            <nav class="menu_main_nav_area">
+                <ul class="menu_main_nav">
+                    <!-- Home -->
+                    <li class="menu-item">
+                        <a href="/">Home</a>
+                    </li>
+                    <!-- /Home -->
+                    <!-- Blog -->
+                    <li class="menu-item">
+                        <a href="/blog.html">Blog</a>
+                    </li>
+                    <!-- /Blog -->
+                    <!-- Course -->
+                    <li class="menu-item">
+                        <a href="/course.html">Course</a>
+                    </li>
+                    <!-- /Course -->
+                    <!-- Github -->
+                    <li class="menu-item">
+                        <a href="https://github.com/ethereumsec/ethereumsec.github.io">Github</a>
+                    </li>
+                    <!-- /Github -->
+                </ul>
+            </nav>
+            <!-- /Menu -->
+        </div>
+        <!-- /Top panel -->
+    </div>
+    <!-- /Side wrap -->
+    <div class="mask"></div>
+</div>
+<!-- /Header Mobile -->            <!-- Breadcrumbs -->
+            <div class="top_panel_title top_panel_style_1 title_present breadcrumbs_present scheme_original">
+                <div class="top_panel_title_inner top_panel_inner_style_1">
+                    <div class="content_wrap">
+                        <h1 class="page_title">Is quantum computing a viable threat to Ethereum?</h1>
+                        <div class="breadcrumbs">
+                            <a class="breadcrumbs_item blog" href="/blog.html">Blog</a>
+                            <span class="breadcrumbs_delimiter"></span>
+                            <span class="breadcrumbs_item current">Is quantum computing a viable threat to Ethereum?</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Breadcrumbs -->
+            <!-- Page Content -->
+            <div class="page_content_wrap page_paddings_yes">
+                <div class="content_wrap">
+                    <!-- Content -->
+                    <div class="content">
+                        <article class="post_item post_item_single">
+                            <!-- Post Content -->
+                            <section class="post_content">
+                                <div class="post_info">
+                                    <span class="post_info_item post_info_posted">Posted Sunday, December 30, 2018</span>
+                                    <span class="post_info_item">by <a href="/author/Randy Gingeleski.html" class="post_info_author">Randy Gingeleski</a></span>
+                                    <span class="post_info_item post_info_tags">in
+                                        <a class="category_link" href="/category/threat modeling.html">threat modeling</a>
+                                    </span>
+                                </div>
+                                <div class="post_summary">
+                                    <p><p>Blockchain skeptics say quantum computing will end Ethereum. Let's elaborate.</p></p>
+                                </div>
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor eros nunc, ac posuere erat ultrices sed. Nullam sit amet cursus ligula, pharetra placerat erat. Pellentesque non turpis a sapien egestas maximus ac vitae mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed tempor non nunc ac luctus. Donec porta posuere erat, at vulputate felis lobortis eget. Maecenas efficitur varius venenatis. Donec placerat augue sed fringilla fringilla. Duis neque risus, facilisis quis massa nec, ultricies porta quam. Fusce accumsan non velit sed scelerisque. Curabitur hendrerit feugiat lectus eu lacinia. Nulla fringilla urna non est lacinia, ut fringilla leo condimentum. Mauris mattis dolor vitae odio fermentum dapibus. In in nisl quis dolor pulvinar finibus a id nisl. Nam magna elit, scelerisque eu tortor a, vestibulum sodales turpis. Phasellus gravida nisi non sem tristique, vel gravida felis lacinia.</p>
+<p>Sed tempus pharetra magna nec maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi nec condimentum justo. Morbi faucibus tincidunt bibendum. Aenean egestas vestibulum erat, sit amet pretium mi tempor vitae. Sed non magna dolor. In non ultricies metus.</p>
+<p>In vitae justo et ipsum imperdiet fringilla ut in turpis. Mauris tincidunt mi turpis, eu suscipit quam lobortis a. Aenean et porttitor lectus. Donec condimentum dui varius augue congue, ac porttitor lectus tincidunt. Quisque quis ex nibh. Nam metus urna, faucibus efficitur leo quis, rhoncus tempus elit. Mauris vulputate et nulla nec tincidunt. Proin hendrerit quam ut nisl tincidunt, eget cursus urna iaculis. Vestibulum sit amet condimentum leo, eget interdum urna. Aenean ut odio bibendum, aliquet libero non, varius ipsum. Morbi non mattis elit, vitae finibus lacus. Phasellus id iaculis ligula. Fusce vitae mi dapibus leo vehicula tempor eget quis urna. Aliquam ullamcorper, sapien vitae tincidunt semper, tellus libero elementum justo, at dictum ex ipsum sed odio.</p>
+<p>Praesent pharetra fermentum tortor id eleifend. Phasellus lacinia, eros ac volutpat hendrerit, justo metus placerat tortor, at scelerisque diam risus in mi. Quisque ultrices mi quis sem tincidunt, in vehicula lorem finibus. Nulla dignissim tellus eget diam fermentum, a varius arcu rutrum. Curabitur vel sapien iaculis, euismod enim in, convallis orci. Mauris vitae mi quam. Suspendisse potenti. Ut molestie massa nec nibh vestibulum interdum. Pellentesque hendrerit efficitur bibendum.</p>
+<p>Nunc interdum scelerisque felis, id convallis nunc mattis id. Morbi scelerisque, quam in cursus laoreet, lorem lectus suscipit leo, vitae accumsan purus justo sit amet mauris. Nam quis tortor vitae lectus sagittis dignissim. Nulla sit amet lorem a nulla semper pretium et quis sem. Nulla facilisi. Phasellus fringilla sodales leo, quis egestas risus laoreet in. Vivamus euismod arcu nec bibendum mollis. Donec est est, tincidunt sed ipsum eu, ultrices iaculis nunc. Nulla facilisi.</p>
+                                </div>
+                                <div class="post_info post_info_bottom">
+                                    <span class="post_info_item post_info_tags">Tags:
+                                        <a class="post_tag_link" href="/tag/quantum computing.html">quantum computing</a>
+                                        <a class="post_tag_link" href="/tag/threat modeling.html">threat modeling</a>
+                                    </span>
+                                </div>
+                            </section>
+                            <!-- /Post Content -->
+                            <!-- Post Author -->
+                            <!-- 
+                            <section class="post_author author">
+                                <h6 class="post_author_title">About <span><a href="#">Randy Gingeleski</a></span>
+                                </h6>
+                                <div class="post_author_info">
+                                    Nam efficitur turpis at nibh aliquet, sed viverra felis accumsan. Curabitur lacinia vitae nulla sit amet mollis. Suspendisse quis augue lorem. Mauris finibus sem nec venenatis sagittis. Pellentesque mattis pulvinar tellus a malesuada.
+                                </div>
+                            </section>
+                            -->
+                            <!-- /Post Author -->
+                        </article>
+                        <!-- Comments -->
+                        <!--
+                        <section class="comments_wrap">
+                            <div id="comments" class="comments_list_wrap">
+                                <h3 class="section_title comments_list_title">No Comments</h3>
+                                <ul class="comments_list"></ul>
+                            </div>
+                            <div class="comments_form_wrap">
+                                <h3 class="section_title comments_form_title">Add Comment</h3>
+                                <div class="comments_form">
+                                    <div id="respond" class="comment-respond">
+                                        <form action="#" method="post" id="commentform" class="comment-form">
+                                            <div class="social-login-widget">
+                                                <div class="social-login-connect-with">Connect with:</div>
+                                                <div class="ocial-login-provider-list">
+                                                    <a href="#" title="Connect with Facebook">
+                                                        <img alt="Facebook" title="Connect with Facebook" src="images/facebook.png" />
+                                                    </a>
+                                                    <a href="#">
+                                                        <img alt="Google" title="Connect with Google" src="images/google.png" />
+                                                    </a>
+                                                    <a href="#" title="Connect with Twitter">
+                                                        <img alt="Twitter" title="Connect with Twitter" src="images/twitter.png" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <p class="comments_notes">Your email address will not be published. Required fields are marked *</p>
+                                            <div class="comments_field comments_message">
+                                                <label for="comment" class="required">Your Message</label>
+                                                <textarea id="comment" name="comment" placeholder="Comment" aria-required="true"></textarea>
+                                            </div>
+                                            <div class="columns_wrap">
+                                                <div class="comments_field comments_author column-1_2">
+                                                    <label for="author" class="required">Name</label>
+                                                    <input id="author" name="author" type="text" placeholder="Name *" value="" size="30" aria-required="true" />
+                                                </div>
+                                                <div class="comments_field comments_email column-1_2">
+                                                    <label for="email" class="required">Email</label>
+                                                    <input id="email" name="email" type="text" placeholder="Email *" value="" size="30" aria-required="true" />
+                                                </div>
+                                                <div class="comments_field comments_site column-1_1">
+                                                    <label for="url" class="optional">Website</label>
+                                                    <input id="url" name="url" type="text" placeholder="Website" value="" size="30" aria-required="true" />
+                                                </div>
+                                            </div>
+                                            <p class="form-submit">
+                                                <input name="submit" type="submit" id="send_comment" class="submit" value="Post Comment" />
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        -->
+                        <!-- /Comments -->
+                    </div>
+                    <!-- /Content -->
+                    <!-- Sidebar -->
+                    <div class="sidebar widget_area scheme_original">
+                        <div class="sidebar_inner widget_area_inner"></div>
+                    </div>
+                    <!-- /Sidebar -->
+                </div>
+            </div>
+            <!-- /Page Content -->
+<!-- Not Copyright -->
+<div class="copyright_wrap copyright_style_text scheme_original">
+    <div class="copyright_wrap_inner">
+        <div class="content_wrap">
+            <div class="copyright_text">
+                <a href="/">Ethereum Security Blog</a> - <script type="text/javascript">document.write(new Date().getFullYear());</script> - <a href="https://github.com/ethereumsec/ethereumsec.github.io">Contribute on Github!</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Not Copyright -->        </div>
+        <!-- /Page wrap -->
+    </div>
+    <!-- /Body wrap -->
+<a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a>
+    
+<script type="text/javascript" src="/theme/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="/theme/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/theme/js/_main.js"></script>
+<script type="text/javascript" src="/theme/js/trx_utils.min.js"></script>
+<script type="text/javascript" src="/theme/js/_packed.js"></script>
+<script type="text/javascript" src="/theme/js/vendor/photostack/modernizr.min.js"></script>
+<script type="text/javascript" src="/theme/js/vendor/superfish.js"></script>
+<script type="text/javascript" src="/theme/js/utils.js"></script>
+<script type="text/javascript" src="/theme/js/core.init.js"></script>
+<script type="text/javascript" src="/theme/js/init.js"></script>
+<script type="text/javascript" src="/theme/js/shortcodes.js"></script>
+<script type="text/javascript" src="/theme/js/messages.js"></script>
+<script type="text/javascript" src="/theme/js/vendor/magnific/jquery.magnific-popup.min.js"></script></body>
+</html>

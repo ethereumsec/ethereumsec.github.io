@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scheme_original">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Vuln Gauntlet - Open Ethereum Security Course</title>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Vuln Gauntlet" />
+    <meta property="og:url" content="https://ethsec.io" />
+    <link rel="stylesheet" href="/theme/js/vendor/woocommerce/css/woocommerce-layout.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/js/vendor/woocommerce/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" />
+    <link rel="stylesheet" href="/theme/js/vendor/woocommerce/css/woocommerce.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/js/vendor/revslider/css/settings.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/tpl-revslider.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:300,400,700%7CLato:300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext">
+    <link rel="stylesheet" href="/theme/css/fontello/css/fontello.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/animation.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/shortcodes.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/plugin.woocommerce.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/skin.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/responsive.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/css/messages.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/js/vendor/magnific/magnific-popup.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/theme/js/vendor/swiper/swiper.min.css" type="text/css" media="all" />
+    <link rel="icon" href="/theme/images/favicon_32x32.png" sizes="32x32" />
+    <link rel="icon" href="/theme/images/favicon_192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="/theme/images/favicon_180x180.jpg" />
+</head>
+<body class="body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_show sidebar_right">
+    <div id="page_preloader"></div>
+    <!-- Body wrap -->
+    <div class="body_wrap">
+        <!-- Page wrap -->
+        <div class="page_wrap">
+<!-- Header -->
+<header class="top_panel_wrap top_panel_style_6 scheme_original">
+    <div class="top_panel_wrap_inner top_panel_inner_style_6 top_panel_position_over">
+        <!-- Logo -->
+        <div class="top_panel_middle">
+            <div class="content_wrap">
+                <div class="contact_logo">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/theme/images/logo_small.png" class="logo_main" alt="Ethereum Security Blog">
+                        </a>
+                    </div>
+                </div>
+                <!-- Menu -->
+                <div class="menu_main_wrap">
+                    <nav class="menu_main_nav_area">
+                        <ul class="menu_main_nav">
+                            <!-- Home -->
+                            <li class="menu-item">
+                                <a href="/">Home</a>
+                            </li>
+                            <!-- /Home -->
+                            <!-- Blog -->
+                            <li class="menu-item">
+                                <a href="/blog.html">Blog</a>
+                            </li>
+                            <!-- /Blog -->
+                            <!-- Course -->
+                            <li class="menu-item">
+                                <a href="/course.html">Course</a>
+                            </li>
+                            <!-- /Course -->
+                            <!-- Github -->
+                            <li class="menu-item">
+                                <a href="https://github.com/ethereumsec/ethereumsec.github.io">Github</a>
+                            </li>
+                            <!-- /Github -->
+                        </ul>
+                    </nav>
+                </div>
+                <!-- /Menu -->
+            </div>
+        </div>
+        <!-- /Logo -->
+    </div>
+</header>
+<!-- /Header --><!-- Header Mobile -->
+<div class="header_mobile">
+    <div class="content_wrap">
+        <div class="menu_button icon-menu"></div>
+        <!-- Logo -->
+        <div class="logo">
+            <a href="/">
+                <img src="/theme/images/logo_small.png" class="logo_main" alt="Ethereum Security Blog">
+            </a>
+        </div>
+        <!-- /Logo -->
+    </div>
+    <!-- Side wrap -->
+    <div class="side_wrap">
+        <div class="close">Close</div>
+        <!-- Top panel -->
+        <div class="panel_top">
+            <!-- Menu -->
+            <nav class="menu_main_nav_area">
+                <ul class="menu_main_nav">
+                    <!-- Home -->
+                    <li class="menu-item">
+                        <a href="/">Home</a>
+                    </li>
+                    <!-- /Home -->
+                    <!-- Blog -->
+                    <li class="menu-item">
+                        <a href="/blog.html">Blog</a>
+                    </li>
+                    <!-- /Blog -->
+                    <!-- Course -->
+                    <li class="menu-item">
+                        <a href="/course.html">Course</a>
+                    </li>
+                    <!-- /Course -->
+                    <!-- Github -->
+                    <li class="menu-item">
+                        <a href="https://github.com/ethereumsec/ethereumsec.github.io">Github</a>
+                    </li>
+                    <!-- /Github -->
+                </ul>
+            </nav>
+            <!-- /Menu -->
+        </div>
+        <!-- /Top panel -->
+    </div>
+    <!-- /Side wrap -->
+    <div class="mask"></div>
+</div>
+<!-- /Header Mobile -->            <!-- Breadcrumbs -->
+            <div class="top_panel_title top_panel_style_1 title_present breadcrumbs_present scheme_original">
+                <div class="top_panel_title_inner top_panel_inner_style_1">
+                    <div class="content_wrap">
+                        <div class="breadcrumbs">
+                            <a class="breadcrumbs_item course" href="/course.html">Course</a>
+                            <span class="breadcrumbs_delimiter"></span>
+                            <a class="breadcrumbs_item course" href="/course.html">Contract Security</a>
+                            <span class="breadcrumbs_delimiter"></span>
+                            <span class="breadcrumbs_item current">Vuln Gauntlet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Breadcrumbs -->
+            <!-- Page Content -->
+            <div class="page_content_wrap page_paddings_yes">
+                <div class="content_wrap">
+                    <!-- Content -->
+                    <div class="content">
+                        <article class="post_item post_item_single">
+                            <!-- Post Content -->
+                            <section class="post_content">
+                                <h1>Vuln gauntlet</h1>
+<p>Time to test your knowledge and see if you can catch what's wrong with some Solidity snippets.</p>
+<h3>Example 1</h3>
+<div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">LCOpenTimeout</span><span class="p">(</span><span class="nx">bytes32</span> <span class="nx">_lcID</span><span class="p">)</span> <span class="kr">public</span> <span class="p">{</span>
+    <span class="nx">require</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span> <span class="o">==</span> <span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">].</span><span class="nx">partyAddresses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">].</span><span class="nx">isOpen</span> <span class="o">==</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="nx">require</span><span class="p">(</span><span class="nx">now</span> <span class="o">&gt;</span> <span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">].</span><span class="nx">LCopenTimeout</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">].</span><span class="nx">initialDeposit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">].</span><span class="nx">partyAddresses</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">transfer</span><span class="p">(</span><span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">].</span><span class="nx">ethBalances</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="p">}</span> 
+    <span class="k">if</span><span class="p">(</span><span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">].</span><span class="nx">initialDeposit</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">require</span><span class="p">(</span><span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">].</span><span class="nx">token</span><span class="p">.</span><span class="nx">transfer</span><span class="p">(</span><span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">].</span><span class="nx">partyAddresses</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">].</span><span class="nx">erc20Balances</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="s2">&quot;CreateChannel: token transfer failure&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">emit</span> <span class="nx">DidLCClose</span><span class="p">(</span><span class="nx">_lcID</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">].</span><span class="nx">ethBalances</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">].</span><span class="nx">erc20Balances</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="c1">// only safe to delete since no action was taken on this channel</span>
+    <span class="k">delete</span> <span class="nx">Channels</span><span class="p">[</span><span class="nx">_lcID</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3>Example 2</h3>
+<div class="highlight"><pre><span></span>pragma solidity ^0.4.18;
+
+contract AddressGuessGame {
+
+    function withdrawWinnings() {
+        // Winner if last 8 hex characters of the address are 1
+        require(uint32(msg.sender) == 1);
+        _sendWinnings();
+     }
+
+     function _sendWinnings() {
+         msg.sender.transfer(this.balance);
+     }
+}
+</pre></div>
+
+
+<h3>Example 3</h3>
+<div class="highlight"><pre><span></span>pragma solidity ^0.4.18;
+
+contract Token {
+    mapping(address =&gt; uint) balances;
+
+    function Token(uint _initialSupply) {
+        balances[msg.sender] = _initialSupply;
+    }
+
+    function transfer(address _to, uint _value) public returns (bool) {
+        require(balances[msg.sender] - _value &gt;= 0);
+        balances[msg.sender] -= _value;
+        balances[_to] += _value;
+        return true;
+    }
+
+    function balanceOf(address _owner) public constant returns (uint balance) {
+        return balances[_owner];
+    }
+}
+</pre></div>
+
+
+<h3>Example 4</h3>
+<div class="highlight"><pre><span></span> <span class="c1">// Claim the throne for the given name by paying the currentClaimFee.</span>
+<span class="kd">function</span> <span class="nx">claimThrone</span><span class="p">(</span><span class="kt">string</span> <span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">uint</span> <span class="nx">valuePaid</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+
+    <span class="c1">// If they paid too little, reject claim and refund their money.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">valuePaid</span> <span class="o">&lt;</span> <span class="nx">currentClaimPrice</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">valuePaid</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// If they paid too much, continue with claim but refund the excess.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">valuePaid</span> <span class="o">&gt;</span> <span class="nx">currentClaimPrice</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">uint</span> <span class="nx">excessPaid</span> <span class="o">=</span> <span class="nx">valuePaid</span> <span class="o">-</span> <span class="nx">currentClaimPrice</span><span class="p">;</span>
+        <span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">excessPaid</span><span class="p">);</span>
+        <span class="nx">valuePaid</span> <span class="o">=</span> <span class="nx">valuePaid</span> <span class="o">-</span> <span class="nx">excessPaid</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3>Example 5</h3>
+<div class="highlight"><pre><span></span>pragma solidity ^0.4.18;
+
+contract AddressGuessGame {
+
+    function withdrawWinnings() {
+        // Winner if last 8 hex characters of the address are 1
+        require(uint32(msg.sender) == 1);
+        _sendWinnings();
+     }
+
+     function _sendWinnings() {
+         msg.sender.transfer(this.balance);
+     }
+}
+</pre></div>
+
+
+<h3>Example 6</h3>
+<div class="highlight"><pre><span></span>pragma solidity ^0.4.15;
+
+contract CrowdFundBad {
+    address[] private refundAddresses;
+    mapping(address =&gt; uint) public refundAmount;
+
+    function refundDos() public {
+        for(uint i; i &lt; refundAddresses.length; i++) {
+            require(refundAddresses[i].transfer(refundAmount[refundAddresses[i]]));
+        }
+    }
+}
+</pre></div>
+
+
+<hr>
+<h3>Answer key</h3>
+<table>
+<thead>
+<tr>
+<th>Example ID</th>
+<th>Vulnerability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Reentrancy</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Access control - sendWinnings gets default (public) visibility</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Arithmetic</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Unchecked calls</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Access control</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Denial of service</td>
+</tr>
+</tbody>
+</table>
+                            </section>
+                            <!-- /Post Content -->
+                        </article>
+                    </div>
+                    <!-- /Content -->
+                    <!-- Sidebar -->
+                    <div class="sidebar widget_area scheme_original">
+                        <div class="sidebar_inner widget_area_inner"></div>
+                    </div>
+                    <!-- /Sidebar -->
+                </div>
+            </div>
+            <!-- /Page Content -->
+<!-- Not Copyright -->
+<div class="copyright_wrap copyright_style_text scheme_original">
+    <div class="copyright_wrap_inner">
+        <div class="content_wrap">
+            <div class="copyright_text">
+                <a href="/">Ethereum Security Blog</a> - <script type="text/javascript">document.write(new Date().getFullYear());</script> - <a href="https://github.com/ethereumsec/ethereumsec.github.io">Contribute on Github!</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Not Copyright -->        </div>
+        <!-- /Page wrap -->
+    </div>
+    <!-- /Body wrap -->
+<a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a>
+    
+<script type="text/javascript" src="/theme/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="/theme/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/theme/js/_main.js"></script>
+<script type="text/javascript" src="/theme/js/trx_utils.min.js"></script>
+<script type="text/javascript" src="/theme/js/_packed.js"></script>
+<script type="text/javascript" src="/theme/js/vendor/photostack/modernizr.min.js"></script>
+<script type="text/javascript" src="/theme/js/vendor/superfish.js"></script>
+<script type="text/javascript" src="/theme/js/utils.js"></script>
+<script type="text/javascript" src="/theme/js/core.init.js"></script>
+<script type="text/javascript" src="/theme/js/init.js"></script>
+<script type="text/javascript" src="/theme/js/shortcodes.js"></script>
+<script type="text/javascript" src="/theme/js/messages.js"></script>
+<script type="text/javascript" src="/theme/js/vendor/magnific/jquery.magnific-popup.min.js"></script></body>
+</html>
