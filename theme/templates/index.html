@@ -31,7 +31,7 @@
                         <h2 class="sc_section_title sc_item_title">Recent
                             <span class="thin"> Posts</span>
                         </h2>
-                        <!-- START: Spit out all posts -->
+                        <!-- START: Spit out up to 5 posts -->
                         {% for article in articles[:5] %}
                         {% if article.title|string() != "Blog"|string() %}
                         <div class="sc_section_descr sc_item_descr" style="margin-bottom:1rem">
@@ -43,7 +43,7 @@
                             <p>No posts yet!</p>
                         </div>
                         {% endfor %}
-                        <!-- END: Spit out all posts -->
+                        <!-- END: Spit out up to 5 posts -->
                     </div>
                 </div>
                 <div class="empty_space height_5_7em"></div>
