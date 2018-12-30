@@ -4,48 +4,38 @@
 
 {% block content %}
 
-{# BIG LOOP MACHINE BELOW IS WORK-IN-PROGRESS... #}
-
 <article class="post_item post_item_single">
     <section class="post_content">
-        {% set parentscounter = 1 %}
-        {% set pagescounter = 1 %}
-        {% set firstmatchforparent = true %}
-        {% set parentcountermatched = false %}
+        {% set ns = namespace(parentcounter=1,pagecounter=1,firstmatchforparent=true,parentcountermatched=false,pagecountermatched=false) %}
         {% for _ in range(1, 100) %}{# "INFINITE" LOOP #}
-        <p>Top of infinite loop</p>
-            {% set pagescountermatched = false %}
+            {% set ns.pagecountermatched = false %}
             {% for p in articles %}
                 {% if p.url|string() == "course.html"|string() %}
                 {% continue %}
                 {% endif %}
                 {% if p.parentnumber and p.pagenumber %}
-                    {% if p.parentnumber|string() == parentscounter|string() and p.pagenumber|string() == pagescounter|string() %}
-                        {% if firstmatchforparent %}
+                    {% if p.parentnumber|string() == ns.parentcounter|string() and p.pagenumber|string() == ns.pagecounter|string() %}
+                        {% if ns.firstmatchforparent %}
                             <h4>{{ p.parentcategory }}</h4>
-                            {% set firstmatchforparent = false %}
+                            {% set ns.firstmatchforparent = false %}
                         {% endif %}
                         <p><a href="/course/{{ p.url }}.html">{{ p.title }}</a></p>
-                        {% set pagescountermatched = true %}
-                        {% set parentcountermatched = true %}
+                        {% set ns.pagecountermatched = true %}
+                        {% set ns.parentcountermatched = true %}
                         {% break %}
                     {% endif %}
                 {% endif %}
             {% endfor %}
-            <p>After page for</p>
-            {% if pagescountermatched == false %}
-            <p>D</p>
-                {% if parentcountermatched == false %}
-                <p>E</p>
+            {% if ns.pagecountermatched == false %}
+                {% if ns.parentcountermatched == false %}
                     {% break %}
                 {% else %}
-                <p>F</p>
-                    {% set parentscounter = parentscounter + 1 %}
-                    {% set firstmatchforparent = true %}
+                    {% set ns.parentcounter = ns.parentcounter + 1 %}
+                    {% set ns.pagecounter = 1 %}
+                    {% set ns.firstmatchforparent = true %}
                 {% endif %}
             {% else %}
-            <p>At bottom else, setting</p>
-                {% set pagescounter = pagescounter + 1 %}
+                {% set ns.pagecounter = ns.pagecounter + 1 %}
             {% endif %}
         {% endfor %}
     </section>
