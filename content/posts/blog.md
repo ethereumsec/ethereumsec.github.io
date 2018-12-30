@@ -6,4 +6,4 @@ modified: 2018-12-28
 template: blog_home
 
 
-This is just placeholder content to make sure this page compiles/renders/whatever
+DO NOT MOVE, MODIFY, OR DELETE THIS PAGE - IT IS THE BLOG INDEX
