@@ -16,10 +16,10 @@
                 {% if p.parentnumber and p.pagenumber %}
                     {% if p.parentnumber|string() == ns.parentcounter|string() and p.pagenumber|string() == ns.pagecounter|string() %}
                         {% if ns.firstmatchforparent %}
-                            <h4>{{ p.parentcategory }}</h4>
+                            <h4>{{ p.parentnumber|string() }}. {{ p.parentcategory }}</h4>
                             {% set ns.firstmatchforparent = false %}
                         {% endif %}
-                        <p><a href="/course/{{ p.url }}.html">{{ p.title }}</a></p>
+                        <p>{{ p.pagenumber|string() }}. <a href="/course/{{ p.url }}">{{ p.title }}</a></p>
                         {% set ns.pagecountermatched = true %}
                         {% set ns.parentcountermatched = true %}
                         {% break %}
