@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Randy Gingeleski'
 SITENAME = 'Ethereum Security Blog'
-SITEURL = ''
+SITEURL = 'https://ethsec.io'
 
 PATH = 'content'
 
@@ -33,3 +33,5 @@ DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.loopcontrols']}

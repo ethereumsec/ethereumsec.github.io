@@ -4,9 +4,43 @@
 
 {% block content %}
 
+{# BIG LOOP MACHINE BELOW IS WORK-IN-PROGRESS... #}
+
 <article class="post_item post_item_single">
     <section class="post_content">
-        <!-- TODO -->
+        {% set parentscounter = 1 %}
+        {% set pagescounter = 1 %}
+        {% set firstmatchforparent = true %}
+        {% set parentcountermatched = false %}
+        {% for _ in range(1, 1000000) %}{# "INFINITE" LOOP #}
+            <p>LOOPING LOOPING LOOPING</p>
+            {% set pagescountermatched = false %}
+            {% for page in pages %}
+                <p>THERE WAS A PAGE</p>
+                {% if page.parentnumber and page.pagenumber %}
+                    {% if page.parentnumber == parentscounter and page.pagenumber == pagescounter %}
+                        {% if firstmatchforparent %}
+                            <h4>{{ page.parentcategory }}</h4>
+                            {% set firstmatchforparent = false %}
+                        {% endif %}
+                        <p><a href="/course/{{ page.slug }}.html">{{ page.title }}</a></p>
+                        {% set pagescountermatched = true %}
+                        {% set parentcountermatched = true %}
+                        {% break %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% if pagescountermatched == false %}
+                {% if parentcountermatched == false %}
+                    {% break %}
+                {% else %}
+                    {% set parentscounter = parentscounter + 1 %}
+                    {% set firstmatchforparent = true %}
+                {% endif %}
+            {% else %}
+                {% set pagescounter = pagescounter + 1 %}
+            {% endif %}
+        {% endfor %}
     </section>
 </article>
 
